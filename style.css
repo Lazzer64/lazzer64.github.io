@@ -43,3 +43,11 @@ pre {
     text-align: center;
     color: #9A9A9A;
 }
+
+#aboutBody .thumbnail {
+    border: 0px;
+}
+
+#aboutFace {
+    width: 200px;
+}
