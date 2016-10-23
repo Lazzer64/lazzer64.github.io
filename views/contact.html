@@ -1,2 +1,18 @@
-<h1>Contact</h1>
+<h1 class='text-center'>Contact Me</h1>
 <hr>
+<div class='container-fluid' id='contact'>
+    <form method='post' role='form'> <!-- TODO: php to send email -->
+        <input type='text' class='form-control' placeholder='Name' required='required'>
+        <br />
+
+        <input type='text' class='form-control' placeholder='Email' required='required'>
+        <br />
+
+        <textarea type='text' class='form-control' placeholder='Message' required='required'></textarea>
+        <br />
+
+        <button class='btn btn-primary' type='submit'>
+            Send <span class='glyphicon glyphicon-send'></span>
+        </button>
+    </form>
+</div>

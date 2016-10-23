@@ -51,3 +51,7 @@ pre {
 #aboutFace {
     width: 200px;
 }
+
+#contact textarea{
+    height: 20vw;
+}
