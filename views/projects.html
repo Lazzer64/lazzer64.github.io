@@ -1,26 +1,75 @@
-<h1>Projects</h1>
+<h1 class='text-center'>Projects</h1>
 <hr>
+<div ng-controller='ProjectsCtrl'>
+    <div class='row'>
+        <div class='col-md-8 col-lg-6 col-md-offset-2 col-lg-offset-3'>
+            <div class='media'>
+                <div class='media-left media-top'>
+                    <a href='https://github.com/lazzer64/' target='_blank'>
+                        <img class='media-object project-icon' src='img\git_pic.png'/>
+                    </a>
+                </div>
+                <div class='media-body'>
+                    <h4 class='media-heading'>My Github</h4>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                    no sea takimata sanctus est Lorem ipsum dolor sit amet. lorem
+                </div>
+            </div>
+            <br />
 
-<!-- <div id="slideshow" class="carousel slide" data-ride="carousel"> -->
-
-<!--     <ol class="carousel-indicators"> -->
-<!--         <li data-target="#slideshow" data-slide-to="0" class="active"></li> -->
-<!--         <li data-target="#slideshow" data-slide-to="1"></li> -->
-<!--     </ol> -->
-<!--     <div class="carousel-inner" role="listbox"> -->
-<!--         <div class="item active"> -->
-<!--             <a href="https://github.com/Lazzer64/Mirlanda-s-Lair"><img src="img\mirlanda.png"/></a> -->
-<!--         </div> -->
-<!--         <div class="item"> -->
-<!--             <img src="img\smile2.png"/> -->
-<!--         </div> -->
-<!--     </div> -->
-<!--     <a class="left carousel-control" href="#slideshow" role="button" data-slide="prev"> -->
-<!--         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> -->
-<!--         <span class="sr-only">Previous</span> -->
-<!--     </a> -->
-<!--     <a class="right carousel-control" href="#slideshow" role="button" data-slide="next"> -->
-<!--         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> -->
-<!--         <span class="sr-only">Next</span> -->
-<!--     </a> -->
-<!-- </div> -->
+            <div class='panel panel-default'>
+                <div class='panel-heading' ng-click='github_open = !github_open'>
+                    <h4 class='text-center'>{{(github_open)? 'Hide': 'Show'}} Projects</h4>
+                </div>
+                <div ng-show='github_open' class='list-group' id='github'>
+                    <a href={{repo.html_url}} target='_blank' ng-repeat='repo in github_repos' class='list-group-item'>
+                        <h4 class="list-group-item-heading">{{repo.name}}</h4>
+                        {{repo.description}}
+                    </a>
+                </div>
+            </div>
+            <br />
+            <div class='media'>
+                <div class='media-body'>
+                    <h4 class='media-heading'>School Projects</h4>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                    no sea takimata sanctus est Lorem ipsum dolor sit amet. lorem
+                </div>
+                <div class='media-right media-top'>
+                    <a href='https://bitbucket.org/a_pelavin/' target='_blank'>
+                        <img class='media-object project-icon' src='img\bitbucket_pic.png'/>
+                    </a>
+                </div>
+            </div>
+            <br />
+            <div class='panel panel-default'>
+                <div class='panel-heading' ng-click='bbucket_open = !bbucket_open'>
+                    <h4 class='text-center'>{{(bbucket_open)? 'Hide': 'Show'}} Projects</h4>
+                </div>
+                <div ng-show='bbucket_open' class='list-group'>
+                    <a href={{repo['links']['html']['href']}} target='_blank' ng-repeat='repo in bbucket_repos' class='list-group-item'>
+                        <h4 class="list-group-item-heading">{{repo.name}}</h4>
+                        {{repo.description}}
+                    </a>
+                </div>
+            </div>
+            <br />
+            <div class='media-left media-top'>
+                <a href='' target='_blank'>
+                    <img class='media-object project-icon' src=''/>
+                </a>
+            </div>
+            <div class='media-body'>
+                <h4 class='media-heading'>Something Else</h4>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                no sea takimata sanctus est Lorem ipsum dolor sit amet. lorem
+            </div>
+        </div>
+    </div>
+</div>

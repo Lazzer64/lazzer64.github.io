@@ -15,7 +15,11 @@ body {
     margin: 20px;
 }
 
-#content .panel{
+#content {
+    margin: 20px;
+}
+
+#contentpanel{
     padding: 10px;
 }
 
@@ -50,4 +54,9 @@ pre {
 
 #aboutFace {
     width: 200px;
+}
+
+.project-icon {
+    width: 150px;
+    height: 150px;
 }
