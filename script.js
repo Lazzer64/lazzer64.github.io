@@ -26,6 +26,11 @@ app.controller('NavCtrl', function($scope, $route, $routeParams, $location) {
     $scope.$route = $route;
     $scope.$location = $location;
     $scope.$routeParams = $routeParams;
+    $scope.navOpen = false;
+
+    $scope.$on('$routeChangeStart', function(event) { 
+        $scope.navOpen = false;
+    });
 
     $scope.links = {
         'home':       { location: '/',           glyph: 'glyphicon-home',      text: 'Home',       },

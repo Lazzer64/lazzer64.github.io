@@ -12,27 +12,51 @@
     <body>
         <div ng-app='App'>
             <div ng-controller='NavCtrl'>
-                <nav class='navbar navbar-inverse navbar-static-top'>
-                    <div class='container-fluid'>
+                <nav class='navbar navbar-inverse navbar-fixed-top'>
+
+                    <!-- Hack to avoid using jquery whcih doesnt play well with angular -->
+                    <!-- small screen navbar -->
+                    <div class='visible-xs hidden-sm'>
+                        <button class='navbar-toggle collapsed hidden-sm' ng-click='navOpen = !navOpen'>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <br /> <br />
+                        <div ng-show='navOpen'class='container-fluid'>
+                            <ul class='nav navbar-nav'>
+                                <li class='{{($location.path() == link.location)?"active":""}}' ng-repeat="link in links" >
+                                    <a href='#{{link.location}}'>
+                                        <span class='glyphicon {{link.glyph}}'></span>{{link.text}}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- medium to large navbar -->
+                    <div class='hidden-xs visible-sm visible-md visible-lg'>
                         <ul class='nav navbar-nav'>
                             <li class='{{($location.path() == link.location)?"active":""}}' ng-repeat="link in links" >
                                 <a href='#{{link.location}}'>
                                     <span class='glyphicon {{link.glyph}}'></span>{{link.text}}
                                 </a>
-                            </li> <!-- /navbar-links -->
+                            </li>
                         </ul>
-                    </div> <!-- /container-fluid --> 
+                    </div>
                 </nav>
             </div> <!-- /NavCtrl -->
+
             <div id='content'>
+                <br /> <br /> <!-- padding for navbar -->
                 <div class='panel panel-default'>
                     <div id='contentpanel' class='panel-body'>
                         <ng-view></ng-view>
                     </div>
                 </div>
-                    <div id='footer'>
-                        <small>Created by Alex Pelavin</small>
-                    </div>
+                <div id='footer'>
+                    <small>Created by Alex Pelavin</small>
+                </div>
             </div>
         </div> <!-- /ng-app -->
     </body>
