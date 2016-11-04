@@ -4,13 +4,14 @@
 <div ng-controller='ProjectsCtrl'>
     <div class='row'>
         <div class='col-md-8 col-lg-6 col-md-offset-2 col-lg-offset-3'>
-            <div class='media'>
-                <div class='media-left media-top'>
+            <div class='row'>
+                <div class='col-sm-3'>
                     <a href='https://github.com/lazzer64/' target='_blank'>
-                        <img class='media-object project-icon' src='img\git_pic.png'/>
+                        <img href='https://github.com/lazzer64/' class='media-object project-icon' src='img\git_pic.png'/>
                     </a>
+                    <br />
                 </div>
-                <div class='media-body'>
+                <div class='col-sm-9'>
                     <h4 class='media-heading'>My Github</h4>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                     tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
@@ -32,21 +33,23 @@
                 </div>
             </div>
             <br />
-            <div class='media'>
-                <div class='media-body'>
+            <div class='row'>
+                <div class='col-sm-3'>
+                    <a href='https://bitbucket.org/a_pelavin/' target='_blank'>
+                        <img class='media-object project-icon' src='img\bitbucket_pic.png'/>
+                    </a>
+                    <br />
+                </div>
+                <div class='col-sm-9'>
                     <h4 class='media-heading'>School Projects</h4>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                     tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
                     vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
                     no sea takimata sanctus est Lorem ipsum dolor sit amet. lorem
                 </div>
-                <div class='media-right media-top'>
-                    <a href='https://bitbucket.org/a_pelavin/' target='_blank'>
-                        <img class='media-object project-icon' src='img\bitbucket_pic.png'/>
-                    </a>
-                </div>
             </div>
             <br />
+
             <div class='panel panel-default'>
                 <div class='panel-heading' ng-click='bbucket_open = !bbucket_open'>
                     <h4 class='text-center'>{{(bbucket_open)? 'Hide': 'Show'}} Projects</h4>
@@ -59,17 +62,20 @@
                 </div>
             </div>
             <br />
-            <div class='media-left media-top'>
-                <a href='' target='_blank'>
-                    <img class='media-object project-icon' src=''/>
-                </a>
-            </div>
-            <div class='media-body'>
-                <h4 class='media-heading'>Something Else</h4>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                no sea takimata sanctus est Lorem ipsum dolor sit amet. lorem
+            <div class='row'>
+                <div class='col-sm-3'>
+                    <a href='' target='_blank'>
+                        <img class='media-object project-icon' src=''/>
+                    </a>
+                    <br />
+                </div>
+                <div class='col-sm-9'>
+                    <h4 class='media-heading'>Something Else</h4>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                    no sea takimata sanctus est Lorem ipsum dolor sit amet. lorem
+                </div>
             </div>
         </div>
     </div>
