@@ -48,13 +48,30 @@ app.controller('ProjectsCtrl', function($scope, $http) {
     $scope.github_open = false;
     $scope.bbucket_open = false;
 
-    $http.get('https://api.github.com/users/'+github_user+'/repos')
-        .then(function(resp) {
-            var repos = resp['data'];
-            $scope.github_repos = repos;
-        }); $http.get('https://api.bitbucket.org/2.0/repositories/'+bbucket_user)
-        .then(function(resp) {
-            var repos = resp['data']['values'];
-            $scope.bbucket_repos = repos;
-        });
+    $scope.githubToggle = function() {
+        if($scope.github_repos) {
+            $scope.github_open = !$scope.github_open;
+        } else {
+            $http.get('https://api.github.com/users/'+github_user+'/repos')
+                .then(function(resp) {
+                    var repos = resp.data;
+                    $scope.github_repos = repos;
+                    $scope.github_open = !$scope.github_open;
+                });
+        }
+    };
+
+    $scope.bbucketToggle = function() {
+        if($scope.bbucket_repos) {
+            $scope.bbucket_open = !$scope.bbucket_open;
+        } else {
+            $http.get('https://api.bitbucket.org/2.0/repositories/'+bbucket_user)
+                .then(function(resp) {
+                    var repos = resp.data.values;
+                    $scope.bbucket_repos = repos;
+                    $scope.bbucket_open = !$scope.bbucket_open;
+                });
+        }
+    };
+
 });

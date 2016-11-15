@@ -22,7 +22,7 @@
             <br />
 
             <div class='panel panel-default'>
-                <div class='panel-heading' ng-click='github_open = !github_open'>
+                <div class='panel-heading' ng-click='githubToggle()'>
                     <h4 class='text-center'>{{(github_open)? 'Hide': 'Show'}} Projects</h4>
                 </div>
                 <div ng-show='github_open' class='list-group' id='github'>
@@ -51,7 +51,7 @@
             <br />
 
             <div class='panel panel-default'>
-                <div class='panel-heading' ng-click='bbucket_open = !bbucket_open'>
+                <div class='panel-heading' ng-click='bbucketToggle()'>
                     <h4 class='text-center'>{{(bbucket_open)? 'Hide': 'Show'}} Projects</h4>
                 </div>
                 <div ng-show='bbucket_open' class='list-group'>
