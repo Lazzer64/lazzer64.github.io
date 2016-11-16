@@ -61,3 +61,8 @@ pre {
     width: 150px;
     height: 150px;
 }
+
+#resume {
+    padding-left: 20px;
+    padding-right: 20px;
+}

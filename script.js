@@ -8,7 +8,7 @@ app.config(function($routeProvider, $locationProvider) {
         .when('/projects', {
             templateUrl: 'views/projects.html'
         })
-        .when('/experience', {
+        .when('/resume', {
             templateUrl: 'views/experience.html'
         })
         .when('/about', {
@@ -35,7 +35,7 @@ app.controller('NavCtrl', function($scope, $route, $routeParams, $location) {
     $scope.links = {
         'home':       { location: '/',           glyph: 'glyphicon-home',      text: 'Home',       },
         'projects':   { location: '/projects',   glyph: 'glyphicon-console',   text: 'Projects',   },
-        'experience': { location: '/experience', glyph: 'glyphicon-paperclip', text: 'Experience', },
+        'experience': { location: '/resume',     glyph: 'glyphicon-paperclip', text: 'Resume', },
         'about':      { location: '/about',      glyph: 'glyphicon-user',      text: 'About Me',   },
         'contact':    { location: '/contact',    glyph: 'glyphicon-envelope',  text: 'Contact Me', }
     };
@@ -73,5 +73,9 @@ app.controller('ProjectsCtrl', function($scope, $http) {
                 });
         }
     };
+
+});
+
+app.controller('ExperCtr', function($scope) {
 
 });
