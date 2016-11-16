@@ -66,3 +66,13 @@ pre {
     padding-left: 20px;
     padding-right: 20px;
 }
+
+.back {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    opacity: .50;
+    z-index: 0;
+    transform: rotate(-30deg);
+    filter: grayscale(100%);
+}
