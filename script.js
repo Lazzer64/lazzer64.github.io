@@ -77,5 +77,5 @@ app.controller('ProjectsCtrl', function($scope, $http) {
 });
 
 app.controller('ExperCtr', function($scope) {
-
+    $scope.resume = resume;
 });
