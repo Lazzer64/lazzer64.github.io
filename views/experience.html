@@ -6,7 +6,7 @@
     <script type="text/ng-template" id="list">
         <div ng-class="'h'+size">{{item.subject}}</div>
         <div ng-if="!item.items">
-            <li>{{item}}</li>
+            {{item}}
         </div>
         <div ng-if="item.items" ng-init="size=size+2">
             <ul>
