@@ -4,7 +4,10 @@
 <div ng-controller='ExperCtr' id='resume'>
 
     <script type="text/ng-template" id="list">
-        <div ng-class="'h'+size">{{item.subject}}</div>
+        <div ng-class="'h'+size">
+            {{item.subject}}
+            <small><span ng-if="item.date">{{item.date}}</span></small>
+        </div>
         <div ng-if="!item.items">
             {{item}}
         </div>
