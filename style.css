@@ -11,8 +11,17 @@ body {
     padding-left: 30px; /* Re add padding that was removed from brand */
 }
 
-#content {
-    margin: 20px;
+.home .title {
+    font-size: 200%;
+}
+
+.home br {
+    padding: 0;
+}
+
+.home .body {
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 #content {
