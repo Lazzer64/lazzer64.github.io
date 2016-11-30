@@ -46,6 +46,16 @@ pre {
     clear: left;
 }
 
+.banner {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #F5F5F5;
+    border: 1px solid #DDDDDD;
+}
+
 #slideshow {
     margin: auto;
     width: 500px;
