@@ -31,13 +31,31 @@ var resume = [
             },
             'Operating Systems: Windows, Linux (Ubuntu)',
             'Version control: git, mercurial',
-            'Containers: Docker',
-            'Cloud: Amazon Web Services (EC2, Lambda, Kinesis, KMS)',
         ],
+    },
+    {
+        subject: 'Technologies',
+        items: [
+            {
+                subject: 'Amazon Web Services',
+                items: [ 'EC2, Lambda, Kinesis, KMS' ]
+            },
+            {
+                subject: 'Containers',
+                items: [ 'Docker' ]
+            },
+        ]
     },
     {
         subject: 'Experience',
         items: [
+            {
+                subject: 'Interned at startup Reactor8',
+                date: 'Summer of 2016',
+                items: [
+                    'Worked on project that automated deployment of distributed applications that integrated cloud instances, containers and serverless code (AWS lambda) and slack'
+                ],
+            },
             {
                 subject: 'Interned at startup Reactor8',
                 date: 'Summer of 2015',
